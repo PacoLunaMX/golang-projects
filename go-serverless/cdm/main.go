@@ -34,7 +34,7 @@ func hanlder(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 
 	switch req.HTTPMethod {
 	case "GET":
-		return handlers.GETUser(req, tableName, dynaClient)
+		return handlers.GetUser(req, tableName, dynaClient)
 	case "POST":
 		return handlers.CreateUser(req, tableName, dynaClient)
 	case "PUT":
